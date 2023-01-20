@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alexandria:wght@200;300;400&family=Epilogue:wght@500;700&family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@700&family=Poppins:wght@500&family=Red+Hat+Text:wght@700&family=Space+Mono:wght@700&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <nav id="nav-bar">
+      <ul>
+        <img src="./images/icon-close.svg" alt="icon-close" id="close-menu" />
+        <li>Collections</li>
+        <li>Men</li>
+        <li>Women</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <main id="main">
+      <div class="header-container">
+        <header>
+          <div class="img-container">
+            <img src="./images/icon-menu.svg" alt="icon-menu" id="open-menu" />
+            <img src="./images/logo.svg" alt="logo" />
+          </div>
+          <div class="basket">
+            <small id="number"></small>
+            <img src="./images/icon-cart.svg" alt="icon-cart" />
+            <img src="./images/image-avatar.png" alt="image-avatar" />
+          </div>
+        </header>
+      </div>
+      <div class="flex-box">
+        <div class="thumbnail">
+          <i id="previous"
+            ><img src="./images/icon-previous.svg" alt="icon-previous"
+          /></i>
+          <i class="next" id="next"
+            ><img src="./images/icon-next.svg" alt="icon-next"
+          /></i>
+          <img src="" alt="" id="image" />
+          <div class="side-images">
+            <img
+              src="./images/image-product-1-thumbnail.jpg"
+              alt="image-product-1-thumbnail"
+              class="active"
+            />
+            <img
+              src="./images/image-product-2-thumbnail.jpg"
+              alt="image-product-2-thumbnail"
+            />
+            <img
+              src="./images/image-product-3-thumbnail.jpg"
+              alt="image-product-3-thumbnail"
+            />
+            <img
+              src="./images/image-product-4-thumbnail.jpg"
+              alt="image-product-4-thumbnail"
+            />
+          </div>
+          <div class="empty-cart">
+            <h4>Cart</h4>
+            <hr />
+            <span>Your cart is empty</span>
+          </div>
+          <div class="full-cart">
+            <h4>Cart</h4>
+            <hr />
+            <div class="items-chosen">
+              <img
+                src="./images/image-product-1-thumbnail.jpg"
+                alt="image-product-1-thumbnail"
+              />
+              <div class="info-container">
+                <div class="info">
+                  <h5>Fall Limited Edition Sneakers</h5>
+                  <span class="chosen-new-price"
+                    >$125.00 x<span id="num"></span> <span id="total"></span
+                  ></span>
+                </div>
+                <ion-icon name="trash-outline"></ion-icon>
+              </div>
+            </div>
+            <button id="checkout">Checkout</button>
+          </div>
+        </div>
+        <div class="article">
+          <article>
+            <h4>Sneaker Company</h4>
+            <h2>Fall Limited Edition Sneakers</h2>
+            <p>
+              These low-profile sneakers are your perfect casual wear companion.
+              Featuring a durable rubber outer sole, they’ll withstand
+              everything the weather can offer.
+            </p>
+            <div class="price">
+              <div class="current-price-container">
+                <span class="current-price"> <strong>$125.00</strong></span>
+                <span class="percent-off">50%</span>
+              </div>
+              <div class="old-price">
+                <span>$250.00</span>
+              </div>
+            </div>
+            <div class="flex-btns">
+              <div class="counter">
+                <button data-id="decrease">-</button>
+                <span id="count">0</span>
+                <button data-id="increase">+</button>
+              </div>
+              <button id="add-to-cart">
+                <img src="./images/icon-cart.svg" alt="icon-cart" />
+                Add to cart
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="lightbox">
+        <div class="content">
+          <i id="li-prev"
+            ><img src="./images/icon-previous.svg" alt="icon-previous"
+          /></i>
+          <i class="li-next" id="li-next"
+            ><img src="./images/icon-next.svg" alt="icon-next"
+          /></i>
+          <img
+            src="./images/image-product-1.jpg"
+            alt="image-product-1.jpg"
+            class="img"
+          />
+          <div class="light-images">
+            <img
+              src="./images/image-product-1-thumbnail.jpg"
+              alt="image-product-1-thumbnail"
+              class="active"
+            />
+            <img
+              src="./images/image-product-2-thumbnail.jpg"
+              alt="image-product-2-thumbnail"
+            />
+            <img
+              src="./images/image-product-3-thumbnail.jpg"
+              alt="image-product-3-thumbnail"
+            />
+            <img
+              src="./images/image-product-4-thumbnail.jpg"
+              alt="image-product-4-thumbnail"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Immanuel Osei Boateng</a>.
+      <script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+        nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+      ></script>
+      <script src="index.js"></script>
+    </div>
+  </body>
+</html>
